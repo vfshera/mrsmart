@@ -22,7 +22,7 @@ body {
 
 /** Utilities **/
 .mrsmart-container {
-    @apply px-24;
+    @apply px-5 md:px-16 lg:px-24;
 }
 /** Utilities End **/
 main.mrsmart-parent {
@@ -34,14 +34,14 @@ main.mrsmart-parent {
 }
 
 .footer {
-    @apply bg-primary w-full py-20 mt-auto flex  justify-between;
+    @apply bg-primary w-full py-20 mt-auto flex flex-col-reverse gap-y-10 md:gap-0 items-center md:items-start md:flex-row justify-between;
 
     .brand {
         &-logo {
             @apply flex;
 
             img {
-                @apply h-20;
+                @apply h-16 lg:h-20;
             }
             .brand-name {
                 @apply ml-5;
@@ -50,17 +50,18 @@ main.mrsmart-parent {
                     @apply text-white;
 
                     &.big {
-                        @apply text-3xl;
+                        @apply text-2xl lg:text-3xl;
                     }
 
                     &.small {
+                        @apply text-sm lg:text-base;
                     }
                 }
             }
         }
 
         &-slogan {
-            @apply italic text-white text-[10px] mt-2;
+            @apply italic text-center md:text-left text-white text-[10px] mt-2;
         }
     }
 
@@ -69,12 +70,12 @@ main.mrsmart-parent {
         @apply flex flex-col gap-y-2;
 
         p {
-            @apply font-bold text-white text-xl mb-2;
+            @apply font-bold text-white text-base lg:text-xl mb-2;
         }
 
         a,
         div {
-            @apply text-secondary;
+            @apply text-secondary text-sm lg:text-base;
 
             &.quick-link {
                 @apply font-semibold;
@@ -89,9 +90,13 @@ main.mrsmart-parent {
                 @apply flex gap-2;
 
                 img {
-                    @apply h-6;
+                    @apply h-5 lg:h-6;
                 }
             }
         }
+    }
+
+    .contact {
+        @apply flex items-center md:items-start;
     }
 }

@@ -1652,8 +1652,20 @@ body {
 
 /** Utilities **/
 .mrsmart-container{
-  padding-left: 6rem;
-  padding-right: 6rem;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+}
+@media (min-width: 768px){
+  .mrsmart-container{
+    padding-left: 4rem;
+    padding-right: 4rem;
+  }
+}
+@media (min-width: 1024px){
+  .mrsmart-container{
+    padding-left: 6rem;
+    padding-right: 6rem;
+  }
 }
 
 /** Utilities End **/
@@ -1675,17 +1687,37 @@ main.mrsmart-parent{
   margin-top: auto;
   display: flex;
   width: 100%;
+  flex-direction: column-reverse;
+  align-items: center;
   justify-content: space-between;
+  row-gap: 2.5rem;
   --tw-bg-opacity: 1;
   background-color: rgb(15 72 91 / var(--tw-bg-opacity));
   padding-top: 5rem;
   padding-bottom: 5rem;
 }
+
+@media (min-width: 768px){
+  .footer{
+    flex-direction: row;
+  }
+  .footer{
+    align-items: flex-start;
+  }
+  .footer{
+    gap: 0px;
+  }
+}
 .footer .brand-logo{
   display: flex;
 }
 .footer .brand-logo img{
-  height: 5rem;
+  height: 4rem;
+}
+@media (min-width: 1024px){
+  .footer .brand-logo img{
+    height: 5rem;
+  }
 }
 .footer .brand-logo .brand-name{
   margin-left: 1.25rem;
@@ -1695,15 +1727,37 @@ main.mrsmart-parent{
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 .footer .brand-logo .brand-name p.big{
-  font-size: 1.875rem;
-  line-height: 2.25rem;
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+@media (min-width: 1024px){
+  .footer .brand-logo .brand-name p.big{
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+  }
+}
+.footer .brand-logo .brand-name p.small{
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+@media (min-width: 1024px){
+  .footer .brand-logo .brand-name p.small{
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
 }
 .footer .brand-slogan{
   margin-top: 0.5rem;
+  text-align: center;
   font-size: 10px;
   font-style: italic;
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+@media (min-width: 768px){
+  .footer .brand-slogan{
+    text-align: left;
+  }
 }
 .footer .quick-links, .footer .contact{
   display: flex;
@@ -1712,15 +1766,29 @@ main.mrsmart-parent{
 }
 .footer .quick-links p, .footer .contact p{
   margin-bottom: 0.5rem;
-  font-size: 1.25rem;
-  line-height: 1.75rem;
+  font-size: 1rem;
+  line-height: 1.5rem;
   font-weight: 700;
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
+@media (min-width: 1024px){
+  .footer .quick-links p, .footer .contact p{
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+  }
+}
 .footer .quick-links a, .footer .quick-links div, .footer .contact a, .footer .contact div{
+  font-size: 0.875rem;
+  line-height: 1.25rem;
   --tw-text-opacity: 1;
   color: rgb(158 221 121 / var(--tw-text-opacity));
+}
+@media (min-width: 1024px){
+  .footer .quick-links a, .footer .quick-links div, .footer .contact a, .footer .contact div{
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
 }
 .footer .quick-links a.quick-link, .footer .quick-links div.quick-link, .footer .contact a.quick-link, .footer .contact div.quick-link{
   font-weight: 600;
@@ -1737,7 +1805,21 @@ main.mrsmart-parent{
   gap: 0.5rem;
 }
 .footer .quick-links a.contact-link img, .footer .quick-links div.contact-link img, .footer .contact a.contact-link img, .footer .contact div.contact-link img{
-  height: 1.5rem;
+  height: 1.25rem;
+}
+@media (min-width: 1024px){
+  .footer .quick-links a.contact-link img, .footer .quick-links div.contact-link img, .footer .contact a.contact-link img, .footer .contact div.contact-link img{
+    height: 1.5rem;
+  }
+}
+.footer .contact{
+  display: flex;
+  align-items: center;
+}
+@media (min-width: 768px){
+  .footer .contact{
+    align-items: flex-start;
+  }
 }
 .hover\:border-gray-300:hover{
   --tw-border-opacity: 1;
