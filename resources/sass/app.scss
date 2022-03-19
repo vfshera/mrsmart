@@ -1,0 +1,37 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+html {
+    height: 100%;
+}
+
+body,
+html {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    height: 100%;
+    @apply flex flex-col;
+}
+
+main.mrsmart--parent {
+    @apply bg-gradient-to-br from-indigo-400 to-yellow-600;
+}
+
+.navbar {
+    @apply bg-black text-white w-full h-10;
+}
+
+.footer {
+    @apply bg-gradient-to-br from-green-500 to-indigo-600 w-full h-20 mt-auto;
+}
+
+/** Utilities **/
+.mrsmart--container {
+    @apply px-20;
+}
+/** Utilities End **/
