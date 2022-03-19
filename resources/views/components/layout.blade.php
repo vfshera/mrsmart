@@ -20,7 +20,7 @@
 <body class="mrsmart">
     <x-navbar />
 
-    <main class="mrsmart--parent">
+    <main class="mrsmart-parent">
         {{ $slot }}
     </main>
 

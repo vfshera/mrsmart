@@ -1,3 +1,3 @@
-<div class="navbar mrsmart--container">
+<div class="navbar mrsmart-container">
     Nav
 </div>
