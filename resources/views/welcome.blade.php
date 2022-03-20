@@ -44,7 +44,7 @@
                 </div>
 
 
-                <div class="info-item justify-center">
+                <div class="info-item sm:justify-center">
                     <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
                         viewBox="0 0 32 32" fill="#9EDD79">
                         <path
@@ -66,7 +66,7 @@
 
 
 
-                <div class="info-item">
+                <div class="info-item sm:justify-end">
                     <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
                         viewBox="0 0 30 30" fill="#9EDD79">
                         <path
