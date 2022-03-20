@@ -32,7 +32,11 @@ body {
 /** Alpinejs End**/
 /** Utilities End **/
 main.mrsmart-parent {
-    @apply text-primary;
+    @apply text-primary h-full;
+}
+
+.home-page {
+    height: 100%;
 }
 /** NAVBAR **/
 .navbar {
@@ -164,26 +168,26 @@ main.mrsmart-parent {
 /** SECTIONS **/
 
 section.hero {
-    @apply relative overflow-hidden h-[95vh];
+    @apply relative overflow-hidden h-[70vh] lg:h-[95vh];
 
     img {
-        @apply absolute -bottom-14 left-0 w-full scale-x-[-1] -z-10;
+        @apply absolute -bottom-14 object-cover  left-0 w-full h-full scale-x-[-1] -z-10;
     }
 
     .hero-content {
-        @apply relative bottom-0 h-full left-0 w-full mt-auto z-10  flex flex-col justify-end pb-28 bg-gradient-to-t from-[#111111]/50 via-transparent to-transparent;
+        @apply absolute bottom-0 h-full left-0 w-full mt-auto z-10  flex flex-col justify-end pb-10 md:pb-16 lg:pb-28 bg-gradient-to-t from-[#111111]/50 via-transparent to-transparent;
 
         .welcome-container {
             span.welcome {
-                @apply bg-white px-4 py-2 text-4xl text-primary font-semibold;
+                @apply bg-white px-4 py-2 text-2xl md:text-3xl lg:text-4xl text-primary font-semibold;
             }
         }
 
         h1 {
-            @apply text-6xl mt-10 mb-5 text-white font-bold;
+            @apply text-4xl md:text-5xl lg:text-6xl mt-10 mb-5 text-white font-bold;
         }
         p.slogan {
-            @apply italic text-white text-lg;
+            @apply italic text-white text-base lg:text-lg;
         }
     }
 }

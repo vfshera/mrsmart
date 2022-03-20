@@ -1681,8 +1681,13 @@ body {
 /** Alpinejs End**/
 /** Utilities End **/
 main.mrsmart-parent{
+  height: 100%;
   --tw-text-opacity: 1;
   color: rgb(15 72 91 / var(--tw-text-opacity));
+}
+
+.home-page {
+  height: 100%;
 }
 
 /** NAVBAR **/
@@ -1986,20 +1991,28 @@ main.mrsmart-parent{
 /** SECTIONS **/
 section.hero{
   position: relative;
-  height: 95vh;
+  height: 70vh;
   overflow: hidden;
+}
+@media (min-width: 1024px){
+  section.hero{
+    height: 95vh;
+  }
 }
 section.hero img{
   position: absolute;
   bottom: -3.5rem;
   left: 0px;
   z-index: -10;
+  height: 100%;
   width: 100%;
   --tw-scale-x: -1;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 section.hero .hero-content{
-  position: relative;
+  position: absolute;
   bottom: 0px;
   left: 0px;
   z-index: 10;
@@ -2014,7 +2027,17 @@ section.hero .hero-content{
   --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgb(17 17 17 / 0));
   --tw-gradient-stops: var(--tw-gradient-from), transparent, var(--tw-gradient-to, rgb(0 0 0 / 0));
   --tw-gradient-to: transparent;
-  padding-bottom: 7rem;
+  padding-bottom: 2.5rem;
+}
+@media (min-width: 768px){
+  section.hero .hero-content{
+    padding-bottom: 4rem;
+  }
+}
+@media (min-width: 1024px){
+  section.hero .hero-content{
+    padding-bottom: 7rem;
+  }
 }
 section.hero .hero-content .welcome-container span.welcome{
   --tw-bg-opacity: 1;
@@ -2023,27 +2046,57 @@ section.hero .hero-content .welcome-container span.welcome{
   padding-right: 1rem;
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
-  font-size: 2.25rem;
-  line-height: 2.5rem;
+  font-size: 1.5rem;
+  line-height: 2rem;
   font-weight: 600;
   --tw-text-opacity: 1;
   color: rgb(15 72 91 / var(--tw-text-opacity));
 }
+@media (min-width: 768px){
+  section.hero .hero-content .welcome-container span.welcome{
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+  }
+}
+@media (min-width: 1024px){
+  section.hero .hero-content .welcome-container span.welcome{
+    font-size: 2.25rem;
+    line-height: 2.5rem;
+  }
+}
 section.hero .hero-content h1{
   margin-top: 2.5rem;
   margin-bottom: 1.25rem;
-  font-size: 3.75rem;
-  line-height: 1;
+  font-size: 2.25rem;
+  line-height: 2.5rem;
   font-weight: 700;
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
+@media (min-width: 768px){
+  section.hero .hero-content h1{
+    font-size: 3rem;
+    line-height: 1;
+  }
+}
+@media (min-width: 1024px){
+  section.hero .hero-content h1{
+    font-size: 3.75rem;
+    line-height: 1;
+  }
+}
 section.hero .hero-content p.slogan{
-  font-size: 1.125rem;
-  line-height: 1.75rem;
+  font-size: 1rem;
+  line-height: 1.5rem;
   font-style: italic;
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+@media (min-width: 1024px){
+  section.hero .hero-content p.slogan{
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+  }
 }
 
 /** SECTIONS END**/
