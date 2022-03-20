@@ -1995,7 +1995,7 @@ main.mrsmart-parent{
 /** HERO SECTION **/
 section.hero{
   position: relative;
-  height: 80vh;
+  height: 85vh;
   overflow: hidden;
 }
 @media (min-width: 640px){
@@ -2049,6 +2049,8 @@ section.hero .hero-content{
   }
 }
 section.hero .hero-content .welcome-container span.welcome{
+  position: relative;
+  z-index: 20;
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
   padding-left: 1rem;
@@ -2060,6 +2062,27 @@ section.hero .hero-content .welcome-container span.welcome{
   font-weight: 600;
   --tw-text-opacity: 1;
   color: rgb(15 72 91 / var(--tw-text-opacity));
+}
+section.hero .hero-content .welcome-container span.welcome::after{
+  position: absolute;
+  bottom: -0.25rem;
+  right: -0.25rem;
+  height: 100%;
+  width: 100%;
+  border-width: 2px;
+  content: var(--tw-content);
+  --tw-border-opacity: 1;
+  border-color: rgb(255 255 255 / var(--tw-border-opacity));
+}
+@media (min-width: 640px){
+  section.hero .hero-content .welcome-container span.welcome::after{
+    content: var(--tw-content);
+    bottom: -0.5rem;
+  }
+  section.hero .hero-content .welcome-container span.welcome::after{
+    content: var(--tw-content);
+    right: -0.5rem;
+  }
 }
 @media (min-width: 768px){
   section.hero .hero-content .welcome-container span.welcome{
