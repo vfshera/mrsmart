@@ -1088,6 +1088,11 @@ select{
   --tw-scale-y: 1;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
+.scale-90{
+  --tw-scale-x: .9;
+  --tw-scale-y: .9;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
 .transform{
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
@@ -1668,6 +1673,12 @@ body {
   }
 }
 
+/** Alpinejs **/
+[x-cloak] {
+  display: none !important;
+}
+
+/** Alpinejs End**/
 /** Utilities End **/
 main.mrsmart-parent{
   --tw-text-opacity: 1;
@@ -1693,14 +1704,67 @@ main.mrsmart-parent{
 .navbar a img{
   height: 2.5rem;
 }
-.navbar nav {
+.navbar .mobile-nav{
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  z-index: 50;
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  background-color: rgb(17 24 39 / 0.8);
+}
+.navbar .mobile-nav img.mobile-nav-close{
+  height: 2.5rem;
+  cursor: pointer;
+}
+.navbar .mobile-nav ul{
+  display: flex;
+  height: 80%;
+  width: 91.666667%;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 1.25rem;
+  border-radius: 0.75rem;
+  background-color: rgb(15 72 91 / 0.9);
+  padding: 1.25rem;
+}
+.navbar .mobile-nav ul li.nav-link a{
+  font-size: 1.5rem;
+  line-height: 2rem;
+  text-transform: uppercase;
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+.navbar nav{
   position: absolute;
   left: 50%;
-  transform: translateX(-50%);
+  --tw-translate-x: -50%;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+.navbar nav img.mobile-nav-open{
+  height: 2.5rem;
+}
+@media (min-width: 640px){
+  .navbar nav img.mobile-nav-open{
+    display: none;
+  }
 }
 .navbar nav ul{
-  display: flex;
+  display: none;
   gap: 1.25rem;
+}
+@media (min-width: 640px){
+  .navbar nav ul{
+    display: flex;
+  }
 }
 .navbar nav ul li.nav-link a{
   text-transform: uppercase;
@@ -1710,22 +1774,70 @@ main.mrsmart-parent{
 .navbar nav ul li.nav-link a:hover{
   font-weight: 600;
 }
+@-webkit-keyframes pulse{
+  50%{
+    opacity: .5;
+  }
+}
+@keyframes pulse{
+  50%{
+    opacity: .5;
+  }
+}
 .navbar .call-number{
+  -webkit-animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+          animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  cursor: pointer;
   border-radius: 9999px;
   border-width: 2px;
   --tw-border-opacity: 1;
   border-color: rgb(15 72 91 / var(--tw-border-opacity));
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
-  padding-left: 1rem;
-  padding-right: 1rem;
-  --tw-text-opacity: 1;
-  color: rgb(15 72 91 / var(--tw-text-opacity));
+  padding: 0.5rem;
+  transition-property: color, background-color, border-color, fill, stroke, -webkit-text-decoration-color;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, -webkit-text-decoration-color;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-delay: 75ms;
+  transition-duration: 200ms;
 }
 .navbar .call-number:hover{
   --tw-bg-opacity: 1;
   background-color: rgb(15 72 91 / var(--tw-bg-opacity));
+  --tw-shadow-color: #009587;
+  --tw-shadow: var(--tw-shadow-colored);
 }
+@media (min-width: 1024px){
+  .navbar .call-number{
+    -webkit-animation: none;
+            animation: none;
+  }
+  .navbar .call-number{
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+.navbar .call-number a{
+  display: none;
+  --tw-text-opacity: 1;
+  color: rgb(15 72 91 / var(--tw-text-opacity));
+}
+@media (min-width: 1024px){
+  .navbar .call-number a{
+    display: block;
+  }
+}
+.navbar .call-number img{
+  height: 1.25rem;
+}
+@media (min-width: 1024px){
+  .navbar .call-number img{
+    display: none;
+  }
+  .navbar .call-number img{
+    height: 0px;
+  }
+}
+
 .footer{
   margin-top: auto;
   display: flex;
@@ -1739,6 +1851,7 @@ main.mrsmart-parent{
   padding-top: 5rem;
   padding-bottom: 5rem;
 }
+
 @media (min-width: 768px){
   .footer{
     flex-direction: row;
