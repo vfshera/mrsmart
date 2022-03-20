@@ -1803,7 +1803,10 @@ main.mrsmart-parent{
 .navbar .call-number:hover{
   --tw-bg-opacity: 1;
   background-color: rgb(15 72 91 / var(--tw-bg-opacity));
-  --tw-shadow-color: #009587;
+  --tw-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  --tw-shadow-colored: 0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+  --tw-shadow-color: rgb(0 149 135 / 0.5);
   --tw-shadow: var(--tw-shadow-colored);
 }
 @media (min-width: 1024px){
@@ -1933,37 +1936,35 @@ main.mrsmart-parent{
     line-height: 1.75rem;
   }
 }
-.footer .quick-links a, .footer .quick-links div, .footer .contact a, .footer .contact div{
+.footer .quick-links a, .footer .contact a{
   font-size: 0.875rem;
   line-height: 1.25rem;
   --tw-text-opacity: 1;
   color: rgb(158 221 121 / var(--tw-text-opacity));
 }
 @media (min-width: 1024px){
-  .footer .quick-links a, .footer .quick-links div, .footer .contact a, .footer .contact div{
+  .footer .quick-links a, .footer .contact a{
     font-size: 1rem;
     line-height: 1.5rem;
   }
 }
-.footer .quick-links a.quick-link, .footer .quick-links div.quick-link, .footer .contact a.quick-link, .footer .contact div.quick-link{
+.footer .quick-links a.quick-link, .footer .contact a.quick-link{
   font-weight: 600;
 }
 .footer .quick-links a.quick-link::before,
-.footer .quick-links div.quick-link::before,
-.footer .contact a.quick-link::before,
-.footer .contact div.quick-link::before {
+.footer .contact a.quick-link::before {
   content: "•";
   margin-right: 0.5rem;
 }
-.footer .quick-links a.contact-link, .footer .quick-links div.contact-link, .footer .contact a.contact-link, .footer .contact div.contact-link{
+.footer .quick-links a.contact-link, .footer .contact a.contact-link{
   display: flex;
   gap: 0.5rem;
 }
-.footer .quick-links a.contact-link img, .footer .quick-links div.contact-link img, .footer .contact a.contact-link img, .footer .contact div.contact-link img{
+.footer .quick-links a.contact-link img, .footer .contact a.contact-link img{
   height: 1.25rem;
 }
 @media (min-width: 1024px){
-  .footer .quick-links a.contact-link img, .footer .quick-links div.contact-link img, .footer .contact a.contact-link img, .footer .contact div.contact-link img{
+  .footer .quick-links a.contact-link img, .footer .contact a.contact-link img{
     height: 1.5rem;
   }
 }
@@ -2145,6 +2146,10 @@ main.mrsmart-parent{
 }
 .disabled\:opacity-25:disabled{
   opacity: 0.25;
+}
+.group:hover .group-hover\:text-white{
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 @media (prefers-color-scheme: dark){
   .dark\:bg-gray-900{

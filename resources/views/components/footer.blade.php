@@ -32,11 +32,11 @@
             info@mrsmartcs.com
 
         </a>
-        <div class="contact-link">
+        <a href="tel:+254113350588" class="contact-link">
             <img src="storage/icons/phone.svg" alt="Phone Icon">
 
             +254113350588
 
-        </div>
+        </a>
     </div>
 </div>

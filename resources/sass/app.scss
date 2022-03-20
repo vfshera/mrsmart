@@ -78,7 +78,7 @@ main.mrsmart-parent {
     }
 
     .call-number {
-        @apply cursor-pointer p-2 lg:px-4 hover:bg-primary border-2 border-primary rounded-full transition-colors duration-200 delay-75 hover:shadow-accent  animate-pulse lg:animate-none;
+        @apply cursor-pointer p-2 lg:px-4 hover:bg-primary border-2 border-primary rounded-full transition-colors duration-200 delay-75 hover:shadow-accent/50 hover:shadow-md animate-pulse lg:animate-none;
 
         a {
             @apply hidden lg:block  text-primary;
@@ -130,8 +130,7 @@ main.mrsmart-parent {
             @apply font-bold text-white text-base lg:text-xl mb-2;
         }
 
-        a,
-        div {
+        a {
             @apply text-secondary text-sm lg:text-base;
 
             &.quick-link {
