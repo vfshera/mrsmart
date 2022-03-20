@@ -1778,6 +1778,9 @@ main.mrsmart-parent{
   text-transform: uppercase;
   --tw-text-opacity: 1;
   color: rgb(15 72 91 / var(--tw-text-opacity));
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
 }
 .navbar nav ul li.nav-link a:hover{
   font-weight: 600;
@@ -1969,11 +1972,11 @@ main.mrsmart-parent{
   display: flex;
   gap: 0.5rem;
 }
-.footer .quick-links a.contact-link img, .footer .contact a.contact-link img{
+.footer .quick-links a.contact-link svg, .footer .contact a.contact-link svg{
   height: 1.25rem;
 }
 @media (min-width: 1024px){
-  .footer .quick-links a.contact-link img, .footer .contact a.contact-link img{
+  .footer .quick-links a.contact-link svg, .footer .contact a.contact-link svg{
     height: 1.5rem;
   }
 }
@@ -2252,6 +2255,8 @@ section.info-container .info .info-item .item-description .info-value{
 }
 
 /** INFO SECTION END**/
+/** SERVICES SECTION **/
+/** SERVICES SECTION END**/
 /** SECTIONS END**/
 .hover\:border-gray-300:hover{
   --tw-border-opacity: 1;

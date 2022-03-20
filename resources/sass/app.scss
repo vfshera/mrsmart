@@ -75,7 +75,7 @@ main.mrsmart-parent {
 
             li.nav-link {
                 a {
-                    @apply text-primary uppercase hover:font-semibold;
+                    @apply text-primary uppercase transition-all duration-150 hover:font-semibold;
                 }
             }
         }
@@ -151,7 +151,7 @@ main.mrsmart-parent {
             &.contact-link {
                 @apply flex gap-2;
 
-                img {
+                svg {
                     @apply h-5 lg:h-6;
                 }
             }
@@ -225,5 +225,7 @@ section.info-container {
 }
 
 /** INFO SECTION END**/
+/** SERVICES SECTION **/
+/** SERVICES SECTION END**/
 
 /** SECTIONS END**/
