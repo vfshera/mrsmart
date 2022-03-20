@@ -198,7 +198,7 @@ section.hero {
 /** INFO SECTION **/
 
 section.info-container {
-    @apply bg-white z-20 relative flex mb-14 justify-center;
+    @apply bg-ms-light z-20 relative flex mb-14 justify-center;
 
     .info {
         @apply absolute w-11/12 sm:w-10/12 lg:w-10/12 flex sm:flex-row flex-col -top-28 sm:-top-[44px] lg:-top-16 justify-between rounded-2xl bg-primary px-8 lg:px-12 py-8 sm:py-6 lg:py-8 shadow-md gap-5 sm:gap-10 lg:gap-20;
@@ -225,7 +225,48 @@ section.info-container {
 }
 
 /** INFO SECTION END**/
+
 /** SERVICES SECTION **/
+section.services {
+    @apply py-24 bg-ms-light flex justify-between;
+
+    .service-description {
+        @apply w-2/5;
+        h1 {
+            @apply text-primary text-4xl font-bold;
+        }
+
+        p {
+            @apply text-ms-dark text-xl my-1;
+        }
+
+        .image-container {
+            img {
+                @apply h-full w-full;
+            }
+        }
+    }
+
+    .service-list {
+        @apply w-1/2 grid grid-cols-2 gap-10;
+
+        .service {
+            @apply flex gap-3 p-5 bg-white rounded shadow-md cursor-pointer hover:shadow-accent/30;
+            img {
+                @apply h-14;
+            }
+
+            .service-info {
+                p {
+                    @apply text-ms-dark;
+                }
+                span {
+                    @apply text-accent;
+                }
+            }
+        }
+    }
+}
 /** SERVICES SECTION END**/
 
 /** SECTIONS END**/

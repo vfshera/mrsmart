@@ -2154,7 +2154,7 @@ section.info-container{
   display: flex;
   justify-content: center;
   --tw-bg-opacity: 1;
-  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+  background-color: rgb(248 253 254 / var(--tw-bg-opacity));
 }
 section.info-container .info{
   position: absolute;
@@ -2279,6 +2279,70 @@ section.info-container .info .info-item .item-description .info-value{
 
 /** INFO SECTION END**/
 /** SERVICES SECTION **/
+section.services{
+  display: flex;
+  justify-content: space-between;
+  --tw-bg-opacity: 1;
+  background-color: rgb(248 253 254 / var(--tw-bg-opacity));
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+}
+section.services .service-description{
+  width: 40%;
+}
+section.services .service-description h1{
+  font-size: 2.25rem;
+  line-height: 2.5rem;
+  font-weight: 700;
+  --tw-text-opacity: 1;
+  color: rgb(15 72 91 / var(--tw-text-opacity));
+}
+section.services .service-description p{
+  margin-top: 0.25rem;
+  margin-bottom: 0.25rem;
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  --tw-text-opacity: 1;
+  color: rgb(66 66 66 / var(--tw-text-opacity));
+}
+section.services .service-description .image-container img{
+  height: 100%;
+  width: 100%;
+}
+section.services .service-list{
+  display: grid;
+  width: 50%;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 2.5rem;
+}
+section.services .service-list .service{
+  display: flex;
+  cursor: pointer;
+  gap: 0.75rem;
+  border-radius: 0.25rem;
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+  padding: 1.25rem;
+  --tw-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  --tw-shadow-colored: 0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+section.services .service-list .service:hover{
+  --tw-shadow-color: rgb(0 149 135 / 0.3);
+  --tw-shadow: var(--tw-shadow-colored);
+}
+section.services .service-list .service img{
+  height: 3.5rem;
+}
+section.services .service-list .service .service-info p{
+  --tw-text-opacity: 1;
+  color: rgb(66 66 66 / var(--tw-text-opacity));
+}
+section.services .service-list .service .service-info span{
+  --tw-text-opacity: 1;
+  color: rgb(0 149 135 / var(--tw-text-opacity));
+}
+
 /** SERVICES SECTION END**/
 /** SECTIONS END**/
 .hover\:border-gray-300:hover{

@@ -94,10 +94,64 @@
         <section class="mrsmart-container services" id="services">
 
 
-            <h1>Services Section</h1>
-            <h1>Services Section</h1>
-            <h1>Services Section</h1>
-            <h1>Services Section</h1>
+            <div class="service-description">
+                <h1>Services</h1>
+                <p>The services we provide to our customers.</p>
+
+                <div class="image-container">
+                    <img src="storage/images/cleaning_phone.webp" alt="Cleaning at Home">
+                </div>
+            </div>
+
+            <div class="service-list">
+
+                <div class="service">
+                    <img src="storage/icons/clean.svg" alt="Dry Cleaning">
+
+                    <div class="service-info">
+                        <p>Dry Cleaning</p>
+                        <span>Book Service</span>
+                    </div>
+                </div>
+
+                <div class="service">
+                    <img src="storage/icons/carpet.svg" alt="Carpet Cleaning">
+
+                    <div class="service-info">
+                        <p>Carpet Cleaning</p>
+                        <span>Book Service</span>
+                    </div>
+                </div>
+
+                <div class="service">
+                    <img src="storage/icons/house.svg" alt="House Cleaning">
+
+                    <div class="service-info">
+                        <p>House Cleaning</p>
+                        <span>Book Service</span>
+                    </div>
+                </div>
+
+                <div class="service">
+                    <img src="storage/icons/car.svg" alt="Car Interior Cleaning">
+
+                    <div class="service-info">
+                        <p>Car Interior Cleaning</p>
+                        <span>Book Service</span>
+                    </div>
+                </div>
+
+                <div class="service">
+                    <img src="storage/icons/sofa_with_buttons.svg" alt="Upholstery Cleaning">
+
+                    <div class="service-info">
+                        <p>Upholstery Cleaning</p>
+                        <span>Book Service</span>
+                    </div>
+                </div>
+
+            </div>
+
         </section>
 
         <section class="contact" id="contact">
