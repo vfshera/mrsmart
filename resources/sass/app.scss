@@ -22,7 +22,7 @@ body {
 
 /** Utilities **/
 .mrsmart-container {
-    @apply px-5 md:px-16 lg:px-24;
+    @apply px-5 md:px-16 lg:px-32;
 }
 /** Utilities End **/
 main.mrsmart-parent {
@@ -30,7 +30,37 @@ main.mrsmart-parent {
 }
 
 .navbar {
-    @apply bg-black text-white w-full h-10;
+    @apply bg-white shadow text-primary w-full py-3 flex justify-between items-center relative;
+
+    a {
+        img {
+            @apply h-10;
+        }
+    }
+
+    nav {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+
+        ul {
+            @apply flex gap-5;
+
+            li.nav-link {
+                a {
+                    @apply text-primary uppercase hover:font-semibold;
+                }
+            }
+        }
+    }
+
+    .call-number {
+        @apply py-2 px-4 hover:bg-primaryborder-2 border-primary rounded-full transition-colors duration-200 delay-75 hover: shadow-accent group hover:text-white;
+
+        a {
+            @apply group-hover:text-white  text-primary;
+        }
+    }
 }
 
 .footer {

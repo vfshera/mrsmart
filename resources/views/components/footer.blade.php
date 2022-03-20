@@ -1,4 +1,4 @@
-<div class="footer mrsmart-container">
+<div class="mrsmart-container footer ">
     <div class="brand">
         <div class="brand-logo">
             <img src="storage/icons/mrsmart.svg" alt="MrSmart White Logo">
