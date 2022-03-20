@@ -261,7 +261,11 @@ section.services {
                     @apply text-ms-dark;
                 }
                 span {
-                    @apply text-accent;
+                    @apply text-accent flex gap-1;
+
+                    img {
+                        @apply h-5;
+                    }
                 }
             }
         }

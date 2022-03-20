@@ -2339,8 +2339,13 @@ section.services .service-list .service .service-info p{
   color: rgb(66 66 66 / var(--tw-text-opacity));
 }
 section.services .service-list .service .service-info span{
+  display: flex;
+  gap: 0.25rem;
   --tw-text-opacity: 1;
   color: rgb(0 149 135 / var(--tw-text-opacity));
+}
+section.services .service-list .service .service-info span img{
+  height: 1.25rem;
 }
 
 /** SERVICES SECTION END**/
