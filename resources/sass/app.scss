@@ -34,9 +34,9 @@ body {
 main.mrsmart-parent {
     @apply text-primary;
 }
-
+/** NAVBAR **/
 .navbar {
-    @apply bg-white shadow text-primary w-full py-3 flex justify-between items-center relative;
+    @apply fixed top-0 left-0 z-50 w-full bg-white/[0.95] shadow text-primary w-full py-3 flex justify-between items-center;
 
     a {
         img {
@@ -89,7 +89,9 @@ main.mrsmart-parent {
         }
     }
 }
+/** NAVBAR END **/
 
+/** FOOTER **/
 .footer {
     @apply bg-primary w-full py-20 mt-auto flex flex-col-reverse gap-y-10 md:gap-0 items-center md:items-start md:flex-row justify-between;
 
@@ -156,3 +158,34 @@ main.mrsmart-parent {
         @apply flex items-center md:items-start;
     }
 }
+
+/** FOOTER END **/
+
+/** SECTIONS **/
+
+section.hero {
+    @apply relative overflow-hidden h-[95vh];
+
+    img {
+        @apply absolute -bottom-14 left-0 w-full scale-x-[-1] -z-10;
+    }
+
+    .hero-content {
+        @apply relative bottom-0 h-full left-0 w-full mt-auto z-10  flex flex-col justify-end pb-28 bg-gradient-to-t from-[#111111]/50 via-transparent to-transparent;
+
+        .welcome-container {
+            span.welcome {
+                @apply bg-white px-4 py-2 text-4xl text-primary font-semibold;
+            }
+        }
+
+        h1 {
+            @apply text-6xl mt-10 mb-5 text-white font-bold;
+        }
+        p.slogan {
+            @apply italic text-white text-lg;
+        }
+    }
+}
+
+/** SECTIONS END**/

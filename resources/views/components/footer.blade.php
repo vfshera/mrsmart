@@ -18,9 +18,9 @@
     <div class="quick-links">
         <p>Quick Links</p>
 
-        <a href="#" class="quick-link">Back to Top</a>
-        <a href="#" class="quick-link">Contact</a>
-        <a href="#" class="quick-link">Services</a>
+        <a href="/#hero" class="quick-link">Back to Top</a>
+        <a href="/#contact" class="quick-link">Contact</a>
+        <a href="/#services" class="quick-link">Services</a>
 
     </div>
 

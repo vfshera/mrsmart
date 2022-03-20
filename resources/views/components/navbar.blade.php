@@ -30,10 +30,10 @@
                 <a href="/">Home</a>
             </li>
             <li class="nav-link">
-                <a href="/">Services</a>
+                <a href="/#services">Services</a>
             </li>
             <li class="nav-link">
-                <a href="/">Contact</a>
+                <a href="/#contact">Contact</a>
             </li>
         </ul>
 
