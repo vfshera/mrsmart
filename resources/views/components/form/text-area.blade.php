@@ -3,5 +3,5 @@
 
 
     <textarea name="{{ strtolower($label) }}" id="{{ strtolower($label) }}" cols="30" rows="10"
-        placeholder=" Enter {{ $label }}"></textarea>
+        placeholder=" Enter {{ strtolower($label) }}"></textarea>
 </div>

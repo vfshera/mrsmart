@@ -136,8 +136,8 @@
 
                 </div>
 
-                <div class="info-photo"
-                    style="background-image: url('storage/images/cleaning_sofa.webp');background-repeat: no-repeat">
+                <div class="info-photo" style="background-image: url('storage/images/cleaning_sofa.webp');background-repeat: no-repeat;background-position: center
+                    ">
 
                 </div>
             </div>
