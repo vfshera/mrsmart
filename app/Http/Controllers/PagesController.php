@@ -33,4 +33,11 @@ class PagesController extends Controller
     
         return view('welcome', compact('services'));
     }
+
+
+
+
+    public function notFound(){
+        return view('notfound');
+    }
 }
