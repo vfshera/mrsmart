@@ -5,13 +5,14 @@
         <section class="hero" id="hero">
 
             <div class=" mrsmart-container hero-content">
-                <div class="welcome-container">
+                <div class="welcome-container animate__animated animate__fadeInUp">
                     <span class="welcome">Welcome to</span>
                 </div>
 
-                <h1>MrSmart Cleaning <br> Services</h1>
+                <h1 class="animate__animated animate__fadeIn">MrSmart Cleaning <br> Services</h1>
 
-                <p class="slogan">Transforming your locality to a clean, healthy living<br>
+                <p class="slogan animate__animated animate__fadeIn">Transforming your locality to a clean, healthy
+                    living<br>
                     and working environment.</p>
 
 
@@ -108,8 +109,8 @@
             <div class="service-list">
 
 
-                @foreach ($services as $service)
-                    <div class="service">
+                @foreach ($services as $key => $service)
+                    <div data-aos="{{ ($key + 1) % 2 == 1 ? 'flip-left' : 'flip-right' }}" class="service ">
                         <img src="storage/icons/{{ $service->icon }}" alt="{{ $service->name }} Icon">
 
                         <div class="service-info">
