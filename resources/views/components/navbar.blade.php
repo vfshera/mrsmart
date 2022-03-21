@@ -78,7 +78,7 @@
             <a class="user-name" href="{{ route('dashboard') }}">Welcome,
                 {{ explode(' ', Auth::user()->name)[0] }}</a>
 
-            <form action="{{ route('logout') }}">
+            <form action="{{ route('logout') }}" method="POST">
                 @csrf()
                 <button type="submit" class="btn-logout">Logout</button>
             </form>
