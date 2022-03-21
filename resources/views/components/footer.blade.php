@@ -18,7 +18,8 @@
     <div class="quick-links">
         <p>Quick Links</p>
 
-        <a href="/#hero" class="quick-link">Back to Top</a>
+        <a href="{{ request()->routeIs('welcome') ? '/#hero' : '/' }}" class="quick-link">Back to Top
+            {{ request()->routeIs('welcome') ? 'Back To Top' : 'Home' }}</a>
         <a href="/#contact" class="quick-link">Contact</a>
         <a href="/#services" class="quick-link">Services</a>
 
