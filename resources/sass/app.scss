@@ -25,6 +25,26 @@ body {
     @apply px-5 md:px-10 lg:px-32;
 }
 
+.input-group {
+    @apply flex flex-col gap-2;
+
+    label {
+        @apply text-primary uppercase font-semibold;
+    }
+
+    input {
+        @apply text-ms-dark border-0 border-b focus:outline-none focus:border-2 border-primary;
+    }
+
+    textarea {
+        @apply text-ms-dark;
+    }
+
+    &:not(:first-child) {
+        @apply mt-5;
+    }
+}
+
 /** Alpinejs **/
 [x-cloak] {
     display: none !important;
@@ -231,7 +251,7 @@ section.services {
     @apply pb-16 pt-20 sm:py-24 bg-ms-light flex flex-col gap-5 sm:gap-0 sm:flex-row justify-between;
 
     .service-description {
-        @apply w-full sm:w-2/5  sm:pr-4 lg:pr-0;
+        @apply w-full sm:w-1/2  sm:pr-4 lg:pr-10;
         h1 {
             @apply text-primary text-4xl font-bold;
         }
@@ -273,5 +293,42 @@ section.services {
     }
 }
 /** SERVICES SECTION END**/
+
+/** CONTACT SECTION **/
+section.contact {
+    @apply flex justify-between;
+
+    .contact-info {
+        @apply w-1/2;
+
+        .info-header {
+            @apply bg-primary py-20 pl-5 md:pl-10 lg:pl-32;
+
+            h1 {
+                @apply text-white text-4xl font-bold;
+            }
+
+            p {
+                @apply text-white text-xl flex gap-2 items-center mt-2;
+                img {
+                    @apply h-10;
+                }
+            }
+        }
+
+        .info-photo {
+            @apply h-72 w-full;
+        }
+    }
+
+    form {
+        @apply w-1/2 p-20 pr-5 md:pr-10 lg:pr-32;
+
+        button {
+            @apply mt-5 px-8 py-3 font-semibold uppercase bg-primary text-white;
+        }
+    }
+}
+/** CONTACT SECTION END**/
 
 /** SECTIONS END**/

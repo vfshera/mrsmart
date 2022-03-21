@@ -127,10 +127,28 @@
         </section>
 
         <section class="contact" id="contact">
-            <h1>Contact Section</h1>
-            <h1>Contact Section</h1>
-            <h1>Contact Section</h1>
-            <h1>Contact Section</h1>
+            <div class="contact-info">
+                <div class="info-header">
+                    <h1>Contact Us</h1>
+                    <p>Reach us
+                        <img src="storage/icons/hand_right.svg" alt="Reach Us Icon">
+                    </p>
+
+                </div>
+
+                <div class="info-photo"
+                    style="background-image: url('storage/images/cleaning_sofa.webp');background-repeat: no-repeat">
+
+                </div>
+            </div>
+            <form action="">
+
+                <x-form.input-field label="Name" />
+                <x-form.input-field label="Email" inputType="email" />
+                <x-form.text-area label="Message" />
+
+                <button>send</button>
+            </form>
         </section>
     </div>
 </x-layout>

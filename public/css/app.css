@@ -1673,6 +1673,38 @@ body {
   }
 }
 
+.input-group{
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.input-group label{
+  font-weight: 600;
+  text-transform: uppercase;
+  --tw-text-opacity: 1;
+  color: rgb(15 72 91 / var(--tw-text-opacity));
+}
+.input-group input{
+  border-width: 0px;
+  border-bottom-width: 1px;
+  --tw-border-opacity: 1;
+  border-color: rgb(15 72 91 / var(--tw-border-opacity));
+  --tw-text-opacity: 1;
+  color: rgb(66 66 66 / var(--tw-text-opacity));
+}
+.input-group input:focus{
+  border-width: 2px;
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+}
+.input-group textarea{
+  --tw-text-opacity: 1;
+  color: rgb(66 66 66 / var(--tw-text-opacity));
+}
+.input-group:not(:first-child){
+  margin-top: 1.25rem;
+}
+
 /** Alpinejs **/
 [x-cloak] {
   display: none !important;
@@ -2306,7 +2338,7 @@ section.services .service-description{
 }
 @media (min-width: 640px){
   section.services .service-description{
-    width: 40%;
+    width: 50%;
   }
   section.services .service-description{
     padding-right: 1rem;
@@ -2314,7 +2346,7 @@ section.services .service-description{
 }
 @media (min-width: 1024px){
   section.services .service-description{
-    padding-right: 0px;
+    padding-right: 2.5rem;
   }
 }
 section.services .service-description h1{
@@ -2433,6 +2465,85 @@ section.services .service-list .service .service-info span img{
 }
 
 /** SERVICES SECTION END**/
+/** CONTACT SECTION **/
+section.contact{
+  display: flex;
+  justify-content: space-between;
+}
+section.contact .contact-info{
+  width: 50%;
+}
+section.contact .contact-info .info-header{
+  --tw-bg-opacity: 1;
+  background-color: rgb(15 72 91 / var(--tw-bg-opacity));
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+  padding-left: 1.25rem;
+}
+@media (min-width: 768px){
+  section.contact .contact-info .info-header{
+    padding-left: 2.5rem;
+  }
+}
+@media (min-width: 1024px){
+  section.contact .contact-info .info-header{
+    padding-left: 8rem;
+  }
+}
+section.contact .contact-info .info-header h1{
+  font-size: 2.25rem;
+  line-height: 2.5rem;
+  font-weight: 700;
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+section.contact .contact-info .info-header p{
+  margin-top: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+section.contact .contact-info .info-header p img{
+  height: 2.5rem;
+}
+section.contact .contact-info .info-photo{
+  height: 18rem;
+  width: 100%;
+}
+section.contact form{
+  width: 50%;
+  padding: 5rem;
+  padding-right: 1.25rem;
+}
+@media (min-width: 768px){
+  section.contact form{
+    padding-right: 2.5rem;
+  }
+}
+@media (min-width: 1024px){
+  section.contact form{
+    padding-right: 8rem;
+  }
+}
+section.contact form button{
+  margin-top: 1.25rem;
+  --tw-bg-opacity: 1;
+  background-color: rgb(15 72 91 / var(--tw-bg-opacity));
+  padding-left: 2rem;
+  padding-right: 2rem;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+/** CONTACT SECTION END**/
 /** SECTIONS END**/
 .hover\:border-gray-300:hover{
   --tw-border-opacity: 1;
