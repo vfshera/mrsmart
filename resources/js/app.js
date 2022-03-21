@@ -4,7 +4,6 @@ import Alpine from "alpinejs";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import "animate.css";
-
 window.Alpine = Alpine;
 
 Alpine.start();

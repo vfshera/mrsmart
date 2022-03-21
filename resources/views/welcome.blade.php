@@ -9,9 +9,10 @@
                     <span class="welcome">Welcome to</span>
                 </div>
 
-                <h1 class="animate__animated animate__fadeIn">MrSmart Cleaning <br> Services</h1>
+                <h1 class="animate__animated animate__fadeInUp">MrSmart Cleaning <br> Services</h1>
 
-                <p class="slogan animate__animated animate__fadeIn">Transforming your locality to a clean, healthy
+                <p class="slogan animate__animated animate__fadeIn animate__delay-1s">Transforming your locality to a
+                    clean, healthy
                     living<br>
                     and working environment.</p>
 
