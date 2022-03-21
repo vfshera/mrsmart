@@ -27,7 +27,7 @@
     <nav>
         <ul @click.outside="showMobileNav = false">
             <li class="nav-link">
-                <a href="/">Home</a>
+                <a href="{{ request()->routeIs('welcome') ? '/#hero' : '/' }}">Home</a>
             </li>
             <li class="nav-link">
                 <a href="/#services">Services</a>

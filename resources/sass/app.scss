@@ -6,10 +6,10 @@
 
 html {
     height: 100%;
+    scroll-behavior: smooth;
 }
 
-body,
-html {
+* {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -325,7 +325,7 @@ section.contact {
         @apply w-full lg:w-1/2 px-10 py-14 sm:p-20 bg-white lg:pr-32;
 
         button {
-            @apply mt-5 w-full px-8 py-5 lg:py-3 font-semibold uppercase bg-primary text-white;
+            @apply mt-5 w-full px-8 py-5 lg:py-3 font-semibold uppercase bg-primary hover:shadow-accent/50 hover:shadow-md text-white;
         }
     }
 }

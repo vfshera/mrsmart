@@ -1640,10 +1640,10 @@ select{
 }
 html {
   height: 100%;
+  scroll-behavior: smooth;
 }
 
-body,
-html {
+* {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -2605,6 +2605,13 @@ section.contact form button{
   text-transform: uppercase;
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+section.contact form button:hover{
+  --tw-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  --tw-shadow-colored: 0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+  --tw-shadow-color: rgb(0 149 135 / 0.5);
+  --tw-shadow: var(--tw-shadow-colored);
 }
 @media (min-width: 1024px){
   section.contact form button{
