@@ -228,7 +228,7 @@ section.info-container {
 
 /** SERVICES SECTION **/
 section.services {
-    @apply py-24 bg-ms-light flex flex-col gap-5 sm:gap-0 sm:flex-row justify-between;
+    @apply pb-16 pt-20 sm:py-24 bg-ms-light flex flex-col gap-5 sm:gap-0 sm:flex-row justify-between;
 
     .service-description {
         @apply w-full sm:w-2/5  sm:pr-4 lg:pr-0;
