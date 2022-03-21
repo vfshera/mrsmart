@@ -12,16 +12,47 @@
             alt="Mobile Menu Close">
 
         <ul>
-            <li class="nav-link" @click=" showMobileNav = ! showMobileNav">
-                <a href="/">Home</a>
-            </li>
-            <li class="nav-link" @click=" showMobileNav = ! showMobileNav">
-                <a href="/">Services</a>
-            </li>
-            <li class="nav-link" @click=" showMobileNav = ! showMobileNav">
-                <a href="/">Contact</a>
-            </li>
+            @guest
+                <li class="nav-link" @click=" showMobileNav = ! showMobileNav">
+                    <a href="/">Home</a>
+                </li>
+                <li class="nav-link" @click=" showMobileNav = ! showMobileNav">
+                    <a href="/">Services</a>
+                </li>
+                <li class="nav-link" @click=" showMobileNav = ! showMobileNav">
+                    <a href="/">Contact</a>
+                </li>
+            @endguest
+
+
+            @auth
+                <li class="nav-link" @click=" showMobileNav = ! showMobileNav">
+                    <a href="/">Site</a>
+                </li>
+                <li class="nav-link" @click=" showMobileNav = ! showMobileNav">
+                    <a href="#">Info</a>
+                </li>
+                <li class="nav-link  {{ request()->routeIs('profile.show') ? 'border-b border-accent' : '' }}"
+                    @click=" showMobileNav = ! showMobileNav">
+                    <a href="{{ route('profile.show') }}">Profile</a>
+                </li>
+
+
+
+                <div class="user-info ">
+                    <a class="user-name" href="{{ route('dashboard') }}">
+                        {{ explode(' ', Auth::user()->name)[0] }}</a>
+
+                    <form action="{{ route('logout') }}" method="POST">
+                        @csrf()
+                        <button type="submit" class="btn-logout">Logout</button>
+                    </form>
+                </div>
+            @endauth
         </ul>
+
+
+
     </div>
 
     @guest
@@ -54,13 +85,16 @@
 
 
     @auth
-        <nav>
+
+        <span class="uppercase sm:hidden">Admin Dashboard</span>
+
+        <nav class="admin-nav">
             <ul @click.outside="showMobileNav = false">
                 <li class="nav-link">
-                    <a href="/">View Site</a>
+                    <a href="/">Site</a>
                 </li>
                 <li class="nav-link">
-                    <a href="#">Site Information</a>
+                    <a href="#">Info</a>
                 </li>
                 <li class="nav-link  {{ request()->routeIs('profile.show') ? 'border-b border-accent' : '' }}">
                     <a href="{{ route('profile.show') }}">Profile</a>

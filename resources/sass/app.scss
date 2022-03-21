@@ -99,9 +99,26 @@ main.mrsmart-parent {
                 }
             }
         }
+
+        .user-info {
+            @apply flex gap-2 flex-col items-center pt-5 border-t border-white;
+            a.user-name {
+                @apply text-white;
+            }
+
+            form {
+                button.btn-logout {
+                    @apply text-red-500 hover:bg-red-500 px-2 py-1 hover:text-white border border-red-500 rounded;
+                }
+            }
+        }
     }
     nav {
         @apply absolute left-[50%] translate-x-[-50%];
+
+        &.admin-nav {
+            @apply static sm:absolute  sm:left-[50%] translate-x-0 sm:translate-x-[-50%];
+        }
 
         img.mobile-nav-open {
             @apply h-10 sm:hidden;
@@ -130,7 +147,7 @@ main.mrsmart-parent {
     }
 
     .user-info {
-        @apply flex gap-5 items-center;
+        @apply hidden sm:flex gap-5 items-center;
         a.user-name {
         }
 
