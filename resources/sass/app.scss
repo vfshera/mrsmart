@@ -112,6 +112,18 @@ main.mrsmart-parent {
             @apply h-5 lg:h-0 lg:hidden;
         }
     }
+
+    .user-info {
+        @apply flex gap-5 items-center;
+        a.user-name {
+        }
+
+        form {
+            button.btn-logout {
+                @apply text-red-500 hover:bg-red-500 px-2 py-1 hover:text-white border border-red-500 rounded;
+            }
+        }
+    }
 }
 /** NAVBAR END **/
 
