@@ -228,10 +228,10 @@ section.info-container {
 
 /** SERVICES SECTION **/
 section.services {
-    @apply py-24 bg-ms-light flex justify-between;
+    @apply py-24 bg-ms-light flex flex-col gap-5 sm:gap-0 sm:flex-row justify-between;
 
     .service-description {
-        @apply w-2/5 pr-4 lg:pr-0;
+        @apply w-full sm:w-2/5  sm:pr-4 lg:pr-0;
         h1 {
             @apply text-primary text-4xl font-bold;
         }
@@ -241,6 +241,7 @@ section.services {
         }
 
         .image-container {
+            @apply mt-3 sm:mt-0;
             img {
                 @apply h-full w-full;
             }
@@ -248,10 +249,10 @@ section.services {
     }
 
     .service-list {
-        @apply w-2/3 lg:w-1/2 grid grid-cols-2 gap-4 lg:gap-10;
+        @apply w-full sm:w-2/3 lg:w-1/2 grid grid-cols-2 gap-4 lg:gap-10;
 
         .service {
-            @apply flex gap-2 lg:gap-3 p-2 lg:p-5 bg-white rounded shadow-md cursor-pointer hover:shadow-accent/30;
+            @apply flex items-center gap-2 lg:gap-3 p-2 lg:p-5 bg-white rounded shadow-md cursor-pointer hover:shadow-accent/30;
             img {
                 @apply h-10 lg:h-14;
             }
@@ -261,7 +262,7 @@ section.services {
                     @apply text-ms-dark text-sm lg:text-base;
                 }
                 span {
-                    @apply text-accent flex gap-1 text-xs lg:text-base;
+                    @apply hidden  text-accent sm:flex items-center gap-1 text-xs lg:text-base;
 
                     img {
                         @apply h-5;

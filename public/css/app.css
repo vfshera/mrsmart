@@ -2281,15 +2281,32 @@ section.info-container .info .info-item .item-description .info-value{
 /** SERVICES SECTION **/
 section.services{
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
+  gap: 1.25rem;
   --tw-bg-opacity: 1;
   background-color: rgb(248 253 254 / var(--tw-bg-opacity));
   padding-top: 6rem;
   padding-bottom: 6rem;
 }
+@media (min-width: 640px){
+  section.services{
+    flex-direction: row;
+  }
+  section.services{
+    gap: 0px;
+  }
+}
 section.services .service-description{
-  width: 40%;
-  padding-right: 1rem;
+  width: 100%;
+}
+@media (min-width: 640px){
+  section.services .service-description{
+    width: 40%;
+  }
+  section.services .service-description{
+    padding-right: 1rem;
+  }
 }
 @media (min-width: 1024px){
   section.services .service-description{
@@ -2311,15 +2328,28 @@ section.services .service-description p{
   --tw-text-opacity: 1;
   color: rgb(66 66 66 / var(--tw-text-opacity));
 }
+section.services .service-description .image-container{
+  margin-top: 0.75rem;
+}
+@media (min-width: 640px){
+  section.services .service-description .image-container{
+    margin-top: 0px;
+  }
+}
 section.services .service-description .image-container img{
   height: 100%;
   width: 100%;
 }
 section.services .service-list{
   display: grid;
-  width: 66.666667%;
+  width: 100%;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 1rem;
+}
+@media (min-width: 640px){
+  section.services .service-list{
+    width: 66.666667%;
+  }
 }
 @media (min-width: 1024px){
   section.services .service-list{
@@ -2332,6 +2362,7 @@ section.services .service-list{
 section.services .service-list .service{
   display: flex;
   cursor: pointer;
+  align-items: center;
   gap: 0.5rem;
   border-radius: 0.25rem;
   --tw-bg-opacity: 1;
@@ -2374,12 +2405,18 @@ section.services .service-list .service .service-info p{
   }
 }
 section.services .service-list .service .service-info span{
-  display: flex;
+  display: none;
+  align-items: center;
   gap: 0.25rem;
   font-size: 0.75rem;
   line-height: 1rem;
   --tw-text-opacity: 1;
   color: rgb(0 149 135 / var(--tw-text-opacity));
+}
+@media (min-width: 640px){
+  section.services .service-list .service .service-info span{
+    display: flex;
+  }
 }
 @media (min-width: 1024px){
   section.services .service-list .service .service-info span{
