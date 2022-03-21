@@ -22,7 +22,7 @@ body {
 
 /** Utilities **/
 .mrsmart-container {
-    @apply px-5 md:px-16 lg:px-32;
+    @apply px-5 md:px-10 lg:px-32;
 }
 
 /** Alpinejs **/
@@ -231,7 +231,7 @@ section.services {
     @apply py-24 bg-ms-light flex justify-between;
 
     .service-description {
-        @apply w-2/5;
+        @apply w-2/5 pr-4 lg:pr-0;
         h1 {
             @apply text-primary text-4xl font-bold;
         }
@@ -248,20 +248,20 @@ section.services {
     }
 
     .service-list {
-        @apply w-1/2 grid grid-cols-2 gap-10;
+        @apply w-2/3 lg:w-1/2 grid grid-cols-2 gap-4 lg:gap-10;
 
         .service {
-            @apply flex gap-3 p-5 bg-white rounded shadow-md cursor-pointer hover:shadow-accent/30;
+            @apply flex gap-2 lg:gap-3 p-2 lg:p-5 bg-white rounded shadow-md cursor-pointer hover:shadow-accent/30;
             img {
-                @apply h-14;
+                @apply h-10 lg:h-14;
             }
 
             .service-info {
                 p {
-                    @apply text-ms-dark;
+                    @apply text-ms-dark text-sm lg:text-base;
                 }
                 span {
-                    @apply text-accent flex gap-1;
+                    @apply text-accent flex gap-1 text-xs lg:text-base;
 
                     img {
                         @apply h-5;
