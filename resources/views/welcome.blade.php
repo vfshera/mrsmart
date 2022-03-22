@@ -2,6 +2,7 @@
     <div class="home-page">
 
 
+
         <section class="hero" id="hero">
 
             <div class=" mrsmart-container hero-content">
@@ -42,7 +43,7 @@
                             Operating Hours
                         </div>
                         <div class="info-value">
-                            Mon - Sat : 8am - 6pm
+                            {{ $siteInfo->operationHours() }}
                         </div>
                     </div>
                 </div>
@@ -62,7 +63,7 @@
                             Our Location
                         </div>
                         <div class="info-value">
-                            Mpeketoni, Lamu
+                            {{ $siteInfo->location }}
                         </div>
                     </div>
                 </div>
@@ -82,7 +83,7 @@
                             Our Email
                         </div>
                         <div class="info-value">
-                            info@mrsmartcs.com
+                            {{ $siteInfo->email }}
                         </div>
                     </div>
                 </div>

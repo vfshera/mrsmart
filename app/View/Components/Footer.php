@@ -3,6 +3,8 @@
 namespace App\View\Components;
 
 use Illuminate\View\Component;
+use App\Models\SiteSettings;
+
 
 class Footer extends Component
 {
@@ -23,6 +25,7 @@ class Footer extends Component
      */
     public function render()
     {
-        return view('components.footer');
+        $siteInfo = SiteSettings::first(); 
+        return view('components.footer',compact('siteInfo'));
     }
 }

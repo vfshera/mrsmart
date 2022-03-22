@@ -6,17 +6,15 @@ use App\Models\SiteSettings;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
-class DatabaseSeeder extends Seeder
+class SiteSettingsSeeder extends Seeder
 {
     /**
-     * Seed the application's database.
+     * Run the database seeds.
      *
      * @return void
      */
     public function run()
     {
-       $this->call([
-           SiteSettingsSeeder::class
-       ]);
+     SiteSettings::factory()->count(1)->create();
     }
 }

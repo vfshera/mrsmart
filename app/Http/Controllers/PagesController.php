@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\SiteSettings;
 use Illuminate\Http\Request;
 
 class PagesController extends Controller
@@ -30,12 +31,25 @@ class PagesController extends Controller
                 "icon" => "sofa_with_buttons.svg"
             ]
             ]));
+
+
+            $siteInfo = SiteSettings::first();
     
-        return view('welcome', compact('services'));
+        return view('welcome', compact('services','siteInfo'));
     }
 
 
 
+
+    public function dashboard(){
+        return view('dashboard');
+    }
+
+    public function settings(){
+        $siteInfo = SiteSettings::first();
+
+        return view('livewire.settings' ,  compact('siteInfo'));
+    }
 
     public function notFound(){
         return view('notfound');

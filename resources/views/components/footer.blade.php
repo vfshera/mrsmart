@@ -18,8 +18,8 @@
     <div class="quick-links">
         <p>Quick Links</p>
 
-        <a href="{{ request()->routeIs('welcome') ? '/#hero' : '/' }}" class="quick-link">Back to Top
-            {{ request()->routeIs('welcome') ? 'Back To Top' : 'Home' }}</a>
+        <a href="{{ request()->routeIs('welcome') ? '/#hero' : '/' }}"
+            class="quick-link">{{ request()->routeIs('welcome') ? 'Back To Top' : 'Home' }}</a>
         <a href="/#contact" class="quick-link">Contact</a>
         <a href="/#services" class="quick-link">Services</a>
 
@@ -35,7 +35,7 @@
                     fill="#9EDD79" />
             </svg>
 
-            info@mrsmartcs.com
+            {{ $siteInfo->email }}
 
         </a>
         <a href="tel:+254113350588" class="contact-link">
@@ -46,7 +46,7 @@
                     fill="#9EDD79" />
             </svg>
 
-            +254113350588
+            {{ $siteInfo->phone }}
 
         </a>
     </div>

@@ -79,7 +79,7 @@
 
         <div class="call-number group">
             <img id="call-icon" src="storage/icons/phone.svg" alt="Call Us Icon">
-            <a id="call-us" class="group-hover:text-white" href="tel:+254113350588">Call Us +254113350588</a>
+            <a id="call-us" class="group-hover:text-white" href="tel:+254113350588">Call Us {{ $siteInfo->phone }}</a>
         </div>
     @endguest
 
@@ -93,8 +93,8 @@
                 <li class="nav-link">
                     <a href="/">Site</a>
                 </li>
-                <li class="nav-link">
-                    <a href="#">Info</a>
+                <li class="nav-link {{ request()->routeIs('site-settings') ? 'border-b border-accent' : '' }}">
+                    <a href="{{ route('site-settings') }}">Info</a>
                 </li>
                 <li class="nav-link  {{ request()->routeIs('profile.show') ? 'border-b border-accent' : '' }}">
                     <a href="{{ route('profile.show') }}">Profile</a>

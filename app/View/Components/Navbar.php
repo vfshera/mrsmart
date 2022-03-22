@@ -3,6 +3,8 @@
 namespace App\View\Components;
 
 use Illuminate\View\Component;
+use App\Models\SiteSettings;
+
 
 class Navbar extends Component
 {
@@ -23,6 +25,8 @@ class Navbar extends Component
      */
     public function render()
     {
-        return view('components.navbar');
+        $siteInfo = SiteSettings::first(); 
+
+        return view('components.navbar', compact('siteInfo'));
     }
 }
