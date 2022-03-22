@@ -44,15 +44,24 @@
                         </div>
                     </div>
 
-                    <div class="settings-group">
+                    <div class="settings-group" x-data="{ hourFrom: false ,hourTo: false}">
                         <h3>Operating Hours</h3>
                         <div class="setting">
                             <p class="name">From</p>
-                            <p class="value">{{ $siteInfo->operation_time_from }}</p>
+                            <p class="value" @click="hourFrom = true" @click.outside="hourFrom = false">
+                                <span x-show="! hourFrom">{{ $siteInfo->operation_time_from }}</span>
+                                <input type="text" x-cloak x-show="hourFrom"
+                                    value="{{ $siteInfo->operation_time_from }}">
+                            </p>
                         </div>
                         <div class="setting">
                             <p class="name">To</p>
-                            <p class="value">{{ $siteInfo->operation_time_to }}</p>
+                            <p class="value" @click="hourTo = true" @click.outside="hourTo = false">
+                                <span x-show="! hourTo">{{ $siteInfo->operation_time_to }}</span>
+                                <input type="text" x-cloak x-show="hourTo" value="{{ $siteInfo->operation_time_to }}">
+                                {{-- <button wire:click="update('operation_time_to')" x-show="hourTo"
+                                    class="bg-accent w-5 h-5 flex justify-center items-center text-white">*</button> --}}
+                            </p>
                         </div>
                     </div>
                 </div>
