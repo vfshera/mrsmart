@@ -8,17 +8,21 @@ use Livewire\Component;
 class Settings extends Component
 {
     public SiteSettings $siteInfo;
+
+    public $settingField = "Heyyy";
+    public $answer = "Answer for Your";
     
-    public function update($field){
-
-        $settings = SiteSettings::first();
+    public function editSetting($setting){
 
 
-
-        var_dump($field);
-        // $settings->update([ $field => ])
+        dd($setting);
+        
+       $this->settingField = $setting;
     }
 
+    public function mount(){
+        $this->siteInfo = SiteSettings::first();
+    }
 
     public function render()
     {

@@ -102,12 +102,15 @@ main.mrsmart-parent {
                 p {
                     @apply shadow px-2 py-3;
 
-                    .name {
+                    &.name {
                         @apply font-semibold;
                     }
 
-                    .value {
+                    &.value {
                         @apply text-gray-600;
+                        span {
+                            @apply relative cursor-pointer block  h-full w-full before:text-white before:py-1 before:px-2 before:shadow-sm before:translate-x-[-50%] before:hidden before:hover:block  before:left-[50%] before:absolute  before:hover:top-0 before:transition-all before:duration-200 before:bg-accent before:text-xs before:scale-0 before:hover:scale-100 before:content-[attr(data-field)];
+                        }
                     }
                 }
             }
@@ -128,12 +131,16 @@ main.mrsmart-parent {
                     p {
                         @apply w-1/2 shadow px-2 py-3;
 
-                        .name {
+                        &.name {
                             @apply font-semibold;
                         }
 
-                        .value {
-                            @apply text-ms-dark;
+                        &.value {
+                            @apply text-red-500;
+
+                            span {
+                                @apply relative cursor-pointer block  h-full w-full before:text-white before:py-1 before:px-2 before:shadow-sm before:translate-x-[-50%] before:hidden before:hover:block  before:left-[50%] before:absolute  before:hover:top-0 before:transition-all before:duration-200 before:bg-accent before:text-xs before:scale-0 before:hover:scale-100 before:content-[attr(data-field)];
+                            }
                         }
                     }
                 }
