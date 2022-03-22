@@ -5657,6 +5657,7 @@ __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
 
 
 
+ // @ts-ignore
 
 window.Alpine = alpinejs__WEBPACK_IMPORTED_MODULE_0__["default"];
 alpinejs__WEBPACK_IMPORTED_MODULE_0__["default"].start();
@@ -5665,9 +5666,13 @@ aos__WEBPACK_IMPORTED_MODULE_1___default().init({
 });
 var callIcon = document.querySelector("#call-icon");
 var callUs = document.querySelector("#call-us");
-callIcon.addEventListener("click", function () {
-  return callUs.click();
-});
+
+if (callIcon && callUs) {
+  // @ts-ignore
+  callIcon.addEventListener("click", function () {
+    return callUs.click();
+  });
+}
 
 /***/ }),
 

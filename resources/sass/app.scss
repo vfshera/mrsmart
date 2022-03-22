@@ -71,8 +71,11 @@ main.mrsmart-parent {
         @apply text-2xl sm:text-5xl;
     }
 
+    span {
+        @apply mb-6 mt-4 text-red-500 font-semibold text-base;
+    }
     a {
-        @apply text-accent mt-10 border border-accent bg-white py-2 px-3 hover:bg-accent hover:text-white rounded;
+        @apply text-accent  border border-accent bg-white py-2 px-3 hover:bg-accent hover:text-white rounded;
     }
 }
 
@@ -300,7 +303,7 @@ main.mrsmart-parent {
 /** HERO SECTION **/
 
 section.hero {
-    @apply relative overflow-hidden h-[85vh] sm:h-[65vh] lg:h-[95vh] bg-ms-light;
+    @apply relative overflow-hidden h-[85vh] sm:h-[65vh] lg:h-[95vh];
 
     img {
         @apply absolute -bottom-14 object-cover  left-0 w-full h-full scale-x-[-1] -z-10;

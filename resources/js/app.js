@@ -4,6 +4,7 @@ import Alpine from "alpinejs";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import "animate.css";
+// @ts-ignore
 window.Alpine = Alpine;
 
 Alpine.start();
@@ -15,4 +16,7 @@ AOS.init({
 const callIcon = document.querySelector("#call-icon");
 const callUs = document.querySelector("#call-us");
 
-callIcon.addEventListener("click", () => callUs.click());
+if (callIcon && callUs) {
+    // @ts-ignore
+    callIcon.addEventListener("click", () => callUs.click());
+}

@@ -1300,13 +1300,13 @@ select{
   --tw-bg-opacity: 1;
   background-color: rgb(229 231 235 / var(--tw-bg-opacity));
 }
-.bg-accent{
-  --tw-bg-opacity: 1;
-  background-color: rgb(0 149 135 / var(--tw-bg-opacity));
-}
 .bg-primary{
   --tw-bg-opacity: 1;
   background-color: rgb(15 72 91 / var(--tw-bg-opacity));
+}
+.bg-accent{
+  --tw-bg-opacity: 1;
+  background-color: rgb(0 149 135 / var(--tw-bg-opacity));
 }
 .bg-opacity-25{
   --tw-bg-opacity: 0.25;
@@ -1795,8 +1795,16 @@ main.mrsmart-parent{
     line-height: 1;
   }
 }
+.not-found-page span{
+  margin-bottom: 1.5rem;
+  margin-top: 1rem;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  font-weight: 600;
+  --tw-text-opacity: 1;
+  color: rgb(239 68 68 / var(--tw-text-opacity));
+}
 .not-found-page a{
-  margin-top: 2.5rem;
   border-radius: 0.25rem;
   border-width: 1px;
   --tw-border-opacity: 1;
@@ -2299,8 +2307,6 @@ section.hero{
   position: relative;
   height: 85vh;
   overflow: hidden;
-  --tw-bg-opacity: 1;
-  background-color: rgb(248 253 254 / var(--tw-bg-opacity));
 }
 @media (min-width: 640px){
   section.hero{

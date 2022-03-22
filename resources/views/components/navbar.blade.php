@@ -109,7 +109,8 @@
 
 
         <div class="user-info ">
-            <a class="user-name" href="{{ route('dashboard') }}">Welcome,
+            <a class="user-name" href="{{ route('dashboard') }}">
+                Welcome,
                 {{ explode(' ', Auth::user()->name)[0] }}</a>
 
             <form action="{{ route('logout') }}" method="POST">
