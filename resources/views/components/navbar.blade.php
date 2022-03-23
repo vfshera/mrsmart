@@ -8,7 +8,7 @@
         x-transition:leave="transition ease-in duration-300" x-transition:leave-start="opacity-100 scale-100"
         x-transition:leave-end="opacity-0 scale-90">
 
-        <img @click="showMobileNav = false" class="mobile-nav-close" src="storage/icons/delete.svg"
+        <img @click="showMobileNav = false" class="mobile-nav-close" src="{{ url('storage/icons/delete.svg') }}"
             alt="Mobile Menu Close">
 
         <ul>
@@ -72,7 +72,8 @@
 
 
 
-            <img @click="showMobileNav = true" class="mobile-nav-open" src="storage/icons/menu.svg" alt="Mobile Menu Open">
+            <img @click="showMobileNav = true" class="mobile-nav-open" src="{{ url('storage/icons/menu.svg') }}"
+                alt="Mobile Menu Open">
 
         </nav>
 
@@ -103,7 +104,8 @@
 
 
 
-            <img @click="showMobileNav = true" class="mobile-nav-open" src="storage/icons/menu.svg" alt="Mobile Menu Open">
+            <img @click="showMobileNav = true" class="mobile-nav-open" src="{{ url('storage/icons/menu.svg') }}"
+                alt="Mobile Menu Open">
 
         </nav>
 

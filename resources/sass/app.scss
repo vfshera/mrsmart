@@ -55,6 +55,81 @@ main.mrsmart-parent {
     @apply text-primary;
 }
 
+.notification-wrapper {
+    @apply fixed top-20 z-30 flex min-h-[20px] w-full justify-center items-center;
+
+    .notifications {
+        @apply w-full  flex flex-col items-center gap-2;
+
+        .alert {
+            @apply rounded  min-w-[25%] flex flex-row-reverse items-center justify-between py-2 px-5 shadow-lg text-ms-dark bg-white;
+
+            .close {
+                @apply font-semibold text-4xl;
+            }
+
+            .message-icon {
+                @apply flex flex-row-reverse items-center gap-2;
+                svg {
+                    @apply h-6;
+                }
+
+                strong {
+                }
+            }
+            &-success {
+                @apply border-green-600 border-b-4;
+
+                .message-icon {
+                    svg {
+                        @apply fill-green-600;
+                    }
+
+                    strong {
+                    }
+                }
+            }
+
+            &-danger {
+                @apply border-red-600 border-b-4;
+
+                .message-icon {
+                    svg {
+                        @apply fill-red-600;
+                    }
+
+                    strong {
+                    }
+                }
+            }
+
+            &-warning {
+                @apply border-yellow-600 border-b-4;
+
+                .message-icon {
+                    svg {
+                        @apply fill-yellow-600;
+                    }
+
+                    strong {
+                    }
+                }
+            }
+
+            &-info {
+                @apply border-blue-600 border-b-4;
+                .message-icon {
+                    svg {
+                        @apply fill-blue-600;
+                    }
+
+                    strong {
+                    }
+                }
+            }
+        }
+    }
+}
 /** PAGES **/
 .home-page {
     height: 100%;
@@ -136,10 +211,10 @@ main.mrsmart-parent {
                         }
 
                         &.value {
-                            @apply text-red-500;
+                            @apply text-ms-dark;
 
                             span {
-                                @apply relative cursor-pointer block  h-full w-full before:text-white before:py-1 before:px-2 before:shadow-sm before:translate-x-[-50%] before:hidden before:hover:block  before:left-[50%] before:absolute  before:hover:top-0 before:transition-all before:duration-200 before:bg-accent before:text-xs before:scale-0 before:hover:scale-100 before:content-[attr(data-field)];
+                                @apply relative cursor-pointer block   h-full w-full before:text-white before:py-1 before:px-2 before:shadow-sm before:translate-x-[-50%] before:hidden before:hover:block  before:left-[50%] before:absolute  before:hover:top-0 before:transition-all before:duration-200 before:bg-accent before:text-xs before:scale-0 before:hover:scale-100 before:content-[attr(data-field)];
                             }
                         }
                     }
@@ -152,7 +227,7 @@ main.mrsmart-parent {
 
 /** NAVBAR **/
 .navbar {
-    @apply fixed top-0 left-0 z-50 w-full bg-white shadow text-primary w-full py-3 flex justify-between items-center;
+    @apply fixed top-0 left-0 z-50  bg-white shadow text-primary w-full py-3 flex justify-between items-center;
 
     a {
         img {

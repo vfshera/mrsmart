@@ -7,17 +7,14 @@ use Livewire\Component;
 
 class Settings extends Component
 {
-    public SiteSettings $siteInfo;
+    public $siteInfo;
 
-    public $settingField = "Heyyy";
-    public $answer = "Answer for Your";
+    public $settingField = "";
+    public $settingValue = "";
     
-    public function editSetting($setting){
-
-
-        dd($setting);
-        
-       $this->settingField = $setting;
+   
+    public function setField($field){
+        $this->settingField = $field;
     }
 
     public function mount(){

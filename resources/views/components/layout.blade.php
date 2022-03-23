@@ -20,6 +20,10 @@
 <body class="mrsmart">
     <x-navbar />
 
+    <div class="notification-wrapper">
+        <x-notification />
+    </div>
+
     <main class="mrsmart-parent">
         {{ $slot }}
     </main>

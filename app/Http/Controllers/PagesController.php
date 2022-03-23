@@ -34,6 +34,7 @@ class PagesController extends Controller
 
 
             $siteInfo = SiteSettings::first();
+
     
         return view('welcome', compact('services','siteInfo'));
     }

@@ -2,7 +2,7 @@
     <div class="mrsmart-container">
         <div class=" site-settings-page">
 
-            <h1>Site Settings</h1>
+            <h1>Site Settings {{ $settingField }}</h1>
 
             <hr>
 
@@ -50,26 +50,24 @@
                             <p class="name">From</p>
                             <p class="value">
 
-
-                                @if ($settingField == 'operation_time_from')
-                                    <input type="text" value="{{ $siteInfo->operation_time_from }}">
+                                @if ($settingField === 'operation_time_from')
+                                    <input type="text" wire:model.debounce.500ms="settingValue"
+                                        value="{{ $siteInfo->operation_time_from }}">
                                 @else
-                                    <span
-                                        wire:click="editSetting('operation_time_from')">{{ $siteInfo->operation_time_from }}</span>
+                                    <span data-field="Edit Operation Time"
+                                        wire:click="setField('operation_time_from')">{{ $siteInfo->operation_time_from }}</span>
                                 @endif
                             </p>
                         </div>
                         <div class="setting">
                             <p class="name">To</p>
                             <p class="value">
-                                @if ($settingField == 'operation_time_to')
-                                    <input type="text" value="{{ $siteInfo->operation_time_to }}">
-                                    {{-- <button wire:click="update('operation_time_to')" x-show="hourTo"
-                                    class="bg-accent w-5 h-5 flex justify-center items-center text-white">*</button> --}}
+                                @if ($settingField === 'operation_time_to')
+                                    <input type="text" wire:model.debounce.500ms="settingValue"
+                                        value="{{ $siteInfo->operation_time_to }}">
                                 @else
                                     <span data-field="Edit Operation Time"
-                                        class=""
-                                        wire:click="editSetting('operation_time_to')">{{ $siteInfo->operation_time_to }}</span>
+                                        wire:click="setField('operation_time_to')">{{ $siteInfo->operation_time_to }}</span>
                                 @endif
                             </p>
                         </div>
