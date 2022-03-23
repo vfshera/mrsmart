@@ -144,8 +144,8 @@
 
                 </div>
             </div>
-            <form action="">
-
+            <form action="{{ route('contact') }}" method="POST">
+                @csrf()
                 <x-form.input-field label="Name" />
                 <x-form.input-field label="Email" inputType="email" />
                 <x-form.text-area label="Message" />

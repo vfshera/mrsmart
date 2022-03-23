@@ -36,6 +36,9 @@ body {
         @apply text-ms-dark border-0 border-b focus:outline-none focus:border-2 border-primary;
     }
 
+    .error {
+        @apply text-xs text-red-500;
+    }
     textarea {
         @apply text-ms-dark;
     }
