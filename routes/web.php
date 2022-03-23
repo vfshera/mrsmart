@@ -1,13 +1,13 @@
 <?php
 
-use App\Http\Controllers\PagesController;
+use App\Http\Controllers\{PagesController, ContactMessageController};
 use App\Http\Livewire\Settings;
 use Illuminate\Support\Facades\Route;
 
 
 
 Route::get('/', [PagesController::class,'index'])->name('welcome');
-Route::post('contact', [PagesController::class,'contact'])->name('contact');
+Route::post('contact', [ContactMessageController::class,'store'])->name('contact');
 
 
 

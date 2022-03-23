@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Requests\ContactUsRequest;
 use App\Models\SiteSettings;
 use Illuminate\Http\Request;
 
@@ -47,9 +46,6 @@ class PagesController extends Controller
         return view('dashboard');
     }
 
-    public function contact(ContactUsRequest $request){
-        return back()->with('success','Thanks For Contacting Us!');
-    }
 
     public function settings(){
         $siteInfo = SiteSettings::first();
