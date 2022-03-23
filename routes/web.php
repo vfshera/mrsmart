@@ -1,7 +1,7 @@
 <?php
 
 use App\Http\Controllers\{PagesController, ContactMessageController};
-use App\Http\Livewire\Settings;
+use App\Http\Livewire\{Messages,Settings};
 use Illuminate\Support\Facades\Route;
 
 
@@ -11,12 +11,12 @@ Route::post('contact', [ContactMessageController::class,'store'])->name('contact
 
 
 
-Route::middleware(['auth:sanctum', 'verified'])->group(function(){
+Route::middleware(['auth:sanctum', 'verified'])->prefix('dashboard')->group(function(){
     
-    Route::get('/dashboard', [PagesController::class,'dashboard'])->name('dashboard');
+    Route::get('/', [PagesController::class,'dashboard'])->name('dashboard');
 
-    Route::get('/dashboard/site-settings',Settings::class)->name('site-settings');
-    // Route::get('/dashboard/site-settings',[PagesController::class,'settings'])->name('site-settings');
+    Route::get('site-settings',Settings::class)->name('site-settings');
+    Route::get('messages', Messages::class)->name('messages');
 
 });
 

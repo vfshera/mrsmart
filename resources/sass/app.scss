@@ -157,6 +157,42 @@ main.mrsmart-parent {
     }
 }
 
+.messages-page {
+    @apply flex bg-white flex-col overflow-hidden shadow-primary/10 shadow-xl sm:rounded-lg p-10;
+
+    h1 {
+        @apply font-bold;
+    }
+
+    hr {
+        @apply bg-primary w-full my-3 h-1;
+    }
+
+    .messages {
+        @apply flex flex-col;
+
+        .message {
+            @apply flex;
+
+            .name {
+                @apply w-1/5;
+            }
+
+            .email {
+                @apply w-1/5;
+            }
+
+            .received {
+                @apply w-1/5;
+            }
+
+            .content {
+                @apply w-2/5;
+            }
+        }
+    }
+}
+
 .site-settings-page {
     @apply flex bg-white flex-col overflow-hidden shadow-primary/10 shadow-xl sm:rounded-lg p-10;
 

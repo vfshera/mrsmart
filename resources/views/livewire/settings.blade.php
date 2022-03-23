@@ -2,7 +2,7 @@
     <div class="mrsmart-container">
         <div class=" site-settings-page">
 
-            <h1>Site Settings {{ $settingField }}</h1>
+            <h1>Site Settings </h1>
 
             <hr>
 

@@ -32,6 +32,10 @@
                 <li class="nav-link" @click=" showMobileNav = ! showMobileNav">
                     <a href="#">Info</a>
                 </li>
+                <li class="nav-link  {{ request()->routeIs('messages') ? 'border-b border-accent' : '' }}"
+                    @click=" showMobileNav = ! showMobileNav">
+                    <a href="{{ route('messages') }}">Messages</a>
+                </li>
                 <li class="nav-link  {{ request()->routeIs('profile.show') ? 'border-b border-accent' : '' }}"
                     @click=" showMobileNav = ! showMobileNav">
                     <a href="{{ route('profile.show') }}">Profile</a>
@@ -96,6 +100,9 @@
                 </li>
                 <li class="nav-link {{ request()->routeIs('site-settings') ? 'border-b border-accent' : '' }}">
                     <a href="{{ route('site-settings') }}">Info</a>
+                </li>
+                <li class="nav-link  {{ request()->routeIs('messages') ? 'border-b border-accent' : '' }}">
+                    <a href="{{ route('messages') }}">Messages</a>
                 </li>
                 <li class="nav-link  {{ request()->routeIs('profile.show') ? 'border-b border-accent' : '' }}">
                     <a href="{{ route('profile.show') }}">Profile</a>
